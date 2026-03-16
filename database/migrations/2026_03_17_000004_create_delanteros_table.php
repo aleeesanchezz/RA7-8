@@ -1,0 +1,25 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('delantero', function (Blueprint $table) {
+            $table->unsignedInteger('id_jugador')->primary();
+            $table->integer('goles_marcados');
+            $table->integer('asistencias');
+            $table->timestamps();
+
+            $table->foreign('id_jugador')->references('id_jugador')->on('jugador')->onDelete('cascade');
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('delantero');
+    }
+};
