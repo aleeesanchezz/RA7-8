@@ -8,7 +8,7 @@ Requisitos mínimos: PHP, Composer y extensión SQLite activada en PHP.
   - Si no tienes la carpeta en ese portátil:
 
 ```bash
-git clone URL_DEL_REPOSITORIO
+git clone https://github.com/aleeesanchezz/RA7-8.git
 cd RA7&8
 ```
 
